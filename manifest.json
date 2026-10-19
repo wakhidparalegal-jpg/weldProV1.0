@@ -2,29 +2,23 @@
   "name": "weldPRO 1.0 - Digital Plant System",
   "short_name": "weldPRO",
   "description": "Digital Plant System - Realtime Welding Plant Monitoring & Production Matrix",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#0B0F19",
   "theme_color": "#0F172A",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-512.png",
+      "src": "android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
-    },
-    {
-      "src": "icon-maskable-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
     }
   ]
 }
