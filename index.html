@@ -1,29 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title> weldProV1.0-Digital Plant System </title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>weldPRO 1.0 - Digital Plant System</title> 
+
+  <!-- 1. Icon pada Tab & Alamat Web (Favicon) -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+  <!-- 2. Icon untuk iPhone / iPad (Safari) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <!-- 3. Web App Manifest (Untuk Install di Android & PC) -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- 4. Warna Tema Browser Bar -->
+  <meta name="theme-color" content="#0F172A">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="weldPRO">
 
   <style>
-    body {
+    * { box-sizing: border-box; }
+    html, body {
       margin: 0;
       padding: 0;
-      overflow: hidden; /* Biar ga ada scrollbar */
-      background-color: #0d1117; /* Warna background gelap biar pas loading ga silau */
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #0B0F19;
     }
     iframe {
       border: none;
       width: 100vw;
       height: 100vh;
+      height: 100dvh;
       display: block;
     }
   </style>
+
+  <!-- 5. Registrasi Service Worker PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./sw.js').catch(function(err) {
+          console.log('SW registration note:', err);
+        });
+      });
+    }
+  </script>
 </head>
 <body>
 
-  <iframe src=https://script.google.com/macros/s/AKfycbzc-ChY_JxJizpjYas4eQkkOw7VXrPAtbDzMWCOWzQx-lrJ8XQjMSWZccYG76IBvi-Yew/exec></iframe>
+  <iframe src="https://script.google.com/macros/s/AKfycbzc-ChY_JxJizpjYas4eQkkOw7VXrPAtbDzMWCOWzQx-lrJ8XQjMSWZccYG76IBvi-Yew/exec" allow="camera; microphone; geolocation; fullscreen"></iframe>
 
 </body>
 </html>
